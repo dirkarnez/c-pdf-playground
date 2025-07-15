@@ -1,6 +1,8 @@
+#include <stdio.h>
+
 static char const* EMPTY_PDF = (
     // force line break
-    "%PDF-1.3\n"
+    "%%PDF-1.3\n"
     "1 0 obj\n"
     "<< /Type /Catalog /Pages 2 0 R >>\n"
     "endobj\n"
@@ -17,8 +19,6 @@ static char const* EMPTY_PDF = (
     "110\n"
     "%%EOF\n");
 
-
-#include <stdio.h>
 
 int main() {
     FILE *fp = fopen("example.pdf", "wb");
